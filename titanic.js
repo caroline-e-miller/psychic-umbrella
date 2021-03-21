@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-    host: 'local host',
+    host: 'localhost',
 
     port: 3000,
 
@@ -37,7 +37,7 @@ const queryDeadPassengers = () => {
 };
 
 connection.connect((err) => {
-    if (err) throw errl
+    if (err) throw err
     console.log(`connected as id ${connection.threadId}`);
     queryAllPassengers();
     queryDeadPassengers();
